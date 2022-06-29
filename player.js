@@ -10,7 +10,7 @@ class Player{
         rect(this.x,this.y,20,150)
     }
     move(){
-        if (this.player_id == 1){
+        if (this.player_id == 2){
             if (keyIsDown(UP_ARROW)) {
                 this.y -= this.speed;
             }
@@ -18,7 +18,7 @@ class Player{
                 this.y += this.speed;
             }}
 
-        if(this.player_id == 2){
+        if(this.player_id == 1){
             if (keyIsDown(87)) {
                 this.y -= this.speed;
             }

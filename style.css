@@ -46,5 +46,17 @@
     font-family:'Arial Black','Arial Bold',Gadget,sans-serif;
     color:#ffffff;
    }
+
+
+   #scoreRight{
+    transform:translatex(1149px) translatey(-833px);
+    width:47px;
+    font-size:77px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-family:'Arial Black','Arial Bold',Gadget,sans-serif;
+    color:#ffffff;
+   }
+   
    
    

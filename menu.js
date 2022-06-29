@@ -4,13 +4,15 @@
          this.title =  createElement("h1",'<h2>Pong Game<h2>');
          this.startButtom = createButton("start")
          this.startButtom.class("startButtom")
-         this.scoreLeft = createElement("h1" ,0)
+         this.scoreLeft = createElement("h1" ,"0")
+         this.scoreRight = createElement("h1", "0")
          this.title.parent(this.menu)
          this.startButtom.parent(this.menu);
         this.startButtom.mousePressed(this.closeUI)
 
         this.menu.id("menu");
         this.scoreLeft.id("scoreLeft")
+        this.scoreRight.id("scoreRight")
         
         this.hue_rotate_value = 1;
    
