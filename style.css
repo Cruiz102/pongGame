@@ -1,0 +1,50 @@
+.startButtom{
+    transform:translatex(0px) translatey(0px);
+    font-size:38px;
+    text-transform:uppercase;
+    text-align:center;
+    letter-spacing:10px;
+    word-spacing:-5px;
+    font-family:'Arial Black','Arial Bold',Gadget,sans-serif;
+    background-color:#90bbe4;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    border-bottom-left-radius:16px;
+    border-bottom-right-radius:16px;
+}
+
+
+
+/* Heading */
+#menu h1 h2{
+    font-family:Impact,Haettenschweiler,'Franklin Gothic Bold',Charcoal,'Helvetica Inserat','Bitstream Vera Sans Bold','Arial Black','sans serif';
+    font-size:110px;
+    line-height:58.5px;
+    letter-spacing:10px;
+    color:#ffffff;
+    word-spacing:1.2px;
+    column-count:1;
+    white-space:pre-line;
+    text-shadow:rgb(0, 0, 0) 0px 20px 30px, rgb(0, 0, 0) 0px -1px 1px;
+    font-weight:700;
+   }
+   
+   /* Menu */
+   #menu{
+    transform: translatex(-290px) translatey(-228px);
+    padding-left:0px;
+    filter: hue-rotate(1deg);
+   }
+   
+/* Score left */
+#scoreLeft{
+    transform:translatex(73px) translatey(-724px);
+    width:47px;
+    font-size:77px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-family:'Arial Black','Arial Bold',Gadget,sans-serif;
+    color:#ffffff;
+   }
+   
+   
