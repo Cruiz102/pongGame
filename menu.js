@@ -38,6 +38,8 @@
       this.menu = document.getElementById("menu")
       console.log(this.menu)
       this.menu.style.visibility = "hidden";
+
+      
    
       
   }

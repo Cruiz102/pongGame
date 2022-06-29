@@ -11,7 +11,7 @@ class Game{
     this.ball = new Ball()
     this.gameLogic = new GameLogic()
 
-  }
+  }z
 
   initGame(){
     createCanvas(this.width, this.height);
@@ -26,6 +26,8 @@ class Game{
   keyHandler(){
 
      }
+
+  zz
     
   
    gameLoop(){

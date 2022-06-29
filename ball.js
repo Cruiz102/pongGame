@@ -2,10 +2,11 @@ class Ball{
     constructor(){
         this.ballSize = 30
         this.speed = 1.012;
+        this.limit = 4
         this.position = createVector(1280/2, 720/2)
         this.velocity = createVector(1, -1);
         this.velocity.normalize()
-        this.velocity.limit(4)
+        this.velocity.limit(this.limit)
     }
 
     show(){
@@ -14,7 +15,7 @@ class Ball{
     move(){
         this.added = this.velocity.mult(this.speed)
         this.position.add(this.added)
-        this.velocity.limit(7)
+        this.velocity.limit(this.limit)
     }
 
     Walls(){
@@ -26,6 +27,12 @@ class Ball{
             this.velocity.y = -this.velocity.y
         }
     }
+ 
+    updateLimit(){
+        this.limit ++
+    }
+
+    
 
     update(){
         this.move()
