@@ -34,15 +34,20 @@ class GameLogic{
 
     hitBallLogic(p1,ball,p2){
         this.p2HitY = ball.position.y >= p2.y  & ball.position.y <= (p2.y + 150)
+        this.offsetP2 = createVector(ball.position.x -p2.x, ball.position.y - (p2.y + 150/2)).normalize()
         if(ball.position.x >= 1240 & this.p2HitY ){
         ball.velocity.x = -ball.velocity.x
+        ball.velocity.rotate( -this.offsetP2.y * 0.5 )
         this.totalHits++
         ball.updateLimit()
+
         }
 
         this.p1HitY = ball.position.y >= p1.y  & ball.position.y <= p1.y + 150
+        this.offsetP1 = createVector(ball.position.x -p2.x, ball.position.y - (p2.y + 150/2)).normalize()
         if(ball.position.x <= 40 & this.p1HitY ){
         ball.velocity.x = -ball.velocity.x
+        ball.velocity.rotate( this.offsetP1.y * 0.5 )
         this.totalHits++
         ball.updateLimit()
         }
@@ -50,7 +55,7 @@ class GameLogic{
 
     }
 
-    changeDirectionwithHit
+    
 
 
 
