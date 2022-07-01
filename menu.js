@@ -8,8 +8,6 @@
          this.scoreRight = createElement("h1", "0")
          this.title.parent(this.menu)
          this.startButtom.parent(this.menu);
-        this.startButtom.mousePressed(this.closeUI)
-
         this.menu.id("menu");
         this.scoreLeft.id("scoreLeft")
         this.scoreRight.id("scoreRight")
@@ -34,15 +32,7 @@
      
 
   }
-  closeUI(){
-      this.menu = document.getElementById("menu")
-      console.log(this.menu)
-      this.menu.style.visibility = "hidden";
 
-      
-   
-      
-  }
 
   
 

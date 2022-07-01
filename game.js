@@ -9,9 +9,12 @@ class Game{
     this.player1 = new Player(20,300, 1)
     this.player2 = new Player(1240,100,2)
     this.ball = new Ball()
-    this.gameLogic = new GameLogic()
+    this.gameLogic = new GameLogic(this.ui)
+    //connect startbutton to its logic.
+    this.ui.startButtom.mousePressed(this.startGame)
 
-  }z
+
+  }
 
   initGame(){
     createCanvas(this.width, this.height);
@@ -19,7 +22,15 @@ class Game{
     this.ui.Menu()
     this.player1.show()
     this.player2.show()
+    this.ball.show()
 
+  }
+
+  startGame(){
+    Singletons.startGame = true;
+    this.menu = document.getElementById("menu")
+    this.menu.style.visibility = "hidden";
+  
   }
     
    
@@ -27,7 +38,7 @@ class Game{
 
      }
 
-  zz
+  
     
   
    gameLoop(){
