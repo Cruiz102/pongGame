@@ -60,14 +60,14 @@ class GameLogic{
         this.offsetP1 = createVector(0, ball.position.y - (p1.position.y + 150)).normalize()
         if(this.checkRaycastIntersection(p1,ball,p2)[0]){
             ball.velocity.x = -ball.velocity.x
-            ball.velocity.rotate( this.offsetP1.y * 0.5 )
+            ball.velocity.rotate( this.offsetP1.y * 0.3 )
             this.totalHits++
             ball.updateVelocity()
         }
         this.offsetP2 = createVector(0, ball.position.y - (p2.position.y + 150)).normalize()
         if(this.checkRaycastIntersection(p1,ball,p2)[1]){
             ball.velocity.x = -ball.velocity.x
-            ball.velocity.rotate( -this.offsetP2.y * 0.5 )
+            ball.velocity.rotate( -this.offsetP2.y * 0.3 )
             this.totalHits++
             ball.updateVelocity()
         }
