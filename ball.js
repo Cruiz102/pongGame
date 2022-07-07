@@ -21,7 +21,7 @@ class Ball{
         this.delta = this.position.copy().add( this.velocity.copy().mult( this.speed))
         this.velocity.limit(this.limit)
     }
-
+//Change
     Walls(){
         // If Player 2 scored
         if(this.position.y <= 0){
