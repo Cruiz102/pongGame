@@ -14,8 +14,32 @@
     <script src="./game_logic.js"></script>
     <script src="./game.js"></script>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCtuN_Ldqv6RyF8W4KhKpQ2FwS5WfUT5TE",
+          authDomain: "ponggame-eddb1.firebaseapp.com",
+          projectId: "ponggame-eddb1",
+          storageBucket: "ponggame-eddb1.appspot.com",
+          messagingSenderId: "480519309036",
+          appId: "1:480519309036:web:76ae31d58a3671ea2647c9",
+          measurementId: "G-50L8V7G13H"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    <title>Pong Game</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
 <body>
     <script src="sketch.js"></script>
