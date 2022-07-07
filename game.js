@@ -33,24 +33,17 @@ class Game{
     this.p2Left = createButton("<h1><<h1>").id("P2Controller")
     this.p2Right = createButton("<h1>><h1>").id("P2Controller")
       this.p1Left.touchStarted(() =>{Singletons.p1LeftController = true})
-      this.p1Left.mousePressed(() =>{Singletons.p1LeftController = true})
       this.p1Right.touchStarted(() =>{Singletons.p1RightController = true})
-      this.p1Right.mousePressed(() =>{Singletons.p1RightController = true})
       this.p2Left.touchStarted(() =>{Singletons.p2LeftController = true})
-      this.p2Left.mousePressed(() =>{Singletons.p2LeftController = true})
       this.p2Right.touchStarted(() =>{Singletons.p2RightController = true})
-      this.p2Right.mousePressed(() =>{Singletons.p2RightController = true})
 
       this.p2Left.touchEnded(() =>{Singletons.p2LeftController = false})
-      this.p2Left.mouseReleased(() =>{Singletons.p2LeftController = false})
       this.p2Right.touchEnded(() =>{Singletons.p2RightController = false})
-      this.p2Right.mouseReleased(() =>{Singletons.p2RightController = false})
       this.p1Left.touchEnded(() =>{Singletons.p1LeftController = false})
-      this.p1Left.mouseReleased(() =>{Singletons.p1LeftController = false})
       this.p1Right.touchEnded(() =>{Singletons.p1RightController = false})
-      this.p1Right.mouseReleased(() =>{Singletons.p1RightController = false})
+   
 
-
+)
   }
 
   startGame(){
