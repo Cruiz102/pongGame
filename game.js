@@ -43,7 +43,7 @@ class Game{
       this.p1Right.touchEnded(() =>{Singletons.p1RightController = false})
    
 
-)
+
   }
 
   startGame(){
