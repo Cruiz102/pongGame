@@ -33,7 +33,7 @@ class Ball{
     }
  
     updateVelocity(){
-        this.speed += 1;
+        this.speed += 1.75;
     }
 
     

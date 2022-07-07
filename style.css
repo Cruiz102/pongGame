@@ -1,3 +1,8 @@
+body{
+    position: static;
+}
+
+
 .startButtom{
     transform:translatex(0px) translatey(0px);
     font-size:38px;
@@ -56,6 +61,34 @@
     margin-bottom:0px;
     font-family:'Arial Black','Arial Bold',Gadget,sans-serif;
     color:#ffffff;
+   }
+
+   #P1Controller{
+    background-color: #458bcc;
+    width: 250px;
+    height: 200px;
+    font-size:20px;
+    margin-right: 30px;
+
+    transform:translatex(30px) translatey(-100px);
+   }
+   #P1Controller:active{
+    background-color: #3a6690;
+
+   }
+
+   #P2Controller{
+    background-color: #d22c03;
+    width: 250px;
+    height: 200px;
+    font-size:20px;
+    margin-left: 30px;
+    transform:translatex(200px) translatey(-100px);
+   }
+
+   #P2Controller:active{
+    background-color: #942c12;
+
    }
    
    

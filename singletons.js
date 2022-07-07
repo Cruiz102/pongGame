@@ -3,6 +3,12 @@ Singletons = {
     isEnd : false,
     isPause : false,
     isResume : false,
+
+    p1LeftController: false,
+    p1RightController: false,
+
+    p2LeftController: false,
+    p2RightController: false,
 }
 
 

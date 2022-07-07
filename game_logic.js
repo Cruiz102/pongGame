@@ -35,7 +35,8 @@ class GameLogic{
 
     hitBallLogic(p1,ball,p2){
 
-        /*
+        /*\
+        BUG CODE:
         this.p2HitY = ball.position.y >= p2.position.y  & ball.position.y <= (p2.position.y + 150)
         this.offsetP2 = createVector(ball.position.x -p2.position.x, ball.position.y - (p2.position.y + 150/2)).normalize()
         if(ball.position.x >= 1240 & this.p2HitY ){
@@ -45,8 +46,6 @@ class GameLogic{
         ball.updateVelocity()
 
         }
-
-
         this.p1HitY = ball.position.y >= p1.position.y  & ball.position.y <= p1.position.y + 150
         this.offsetP1 = createVector(ball.position.x -p2.position.x, ball.position.y - (p2.position.y + 150/2)).normalize()
         if(ball.position.x <= 40 & this.p1HitY ){
@@ -57,22 +56,27 @@ class GameLogic{
         }
         */
         
-        this.offsetP1 = createVector(0, ball.position.y - (p1.position.y + 150)).normalize()
         if(this.checkRaycastIntersection(p1,ball,p2)[0]){
             ball.velocity.x = -ball.velocity.x
-            ball.velocity.rotate( this.offsetP1.y * 0.5 )
+            if(ball.position.y < p1.position.y + 150/2){
+                ball.velocity.rotate( 0.15 )  
+                }
+                else{
+                ball.velocity.rotate( -0.15 )
+                }
             this.totalHits++
             ball.updateVelocity()
         }
-        this.offsetP2 = createVector(0, ball.position.y - (p2.position.y + 150)).normalize()
         if(this.checkRaycastIntersection(p1,ball,p2)[1]){
             ball.velocity.x = -ball.velocity.x
-            ball.velocity.rotate( -this.offsetP2.y * 0.5 )
+            if(ball.position.y < p2.position.y + 150/2){
+            ball.velocity.rotate( 0.15)
+            }
+            else{
+            ball.velocity.rotate( -0.15)
+            }
             this.totalHits++
             ball.updateVelocity()
-        }
-        else{
-        
         }
 
     }
@@ -120,19 +124,13 @@ class GameLogic{
 
 
 
-
-
-
-
-
-
     update(p1,ball,p2){
         this.hitBallLogic(p1,ball,p2)
         if (ball.position.x <= -20){
-            this.scoreLeftPoint(p1,ball,p2)
+            this.scoreRightPoint(p1,ball,p2)
         }
         if (ball.position.x >= 1300){
-            this.scoreRightPoint(p1,ball,p2)
+            this.scoreLeftPoint(p1,ball,p2)
         }
 
 
